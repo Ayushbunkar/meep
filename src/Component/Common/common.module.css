@@ -1,0 +1,85 @@
+.nav{
+    padding: 1rem;
+    padding-top: 0rem;
+    /* position: fixed; */
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    z-index: 999;
+}
+.nav .logo > span:first-child {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #015aff;
+  border-radius: 50px;
+}
+.nav {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.36px;
+  letter-spacing: -0.04em;
+}
+
+.nav .center a,
+.nav .center button{
+    text-decoration: none;
+    color: #000;
+    opacity: .5;
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+.menubtn{
+  border: none;
+  background: transparent;
+}
+
+.menubtn span{
+  display: block;
+  width: 25px;
+  height: 3px;
+  border-radius: 5px;
+  background-color: #000;
+  transition: .2s linear;
+}
+
+
+.menubtn span:first-child{
+  margin-bottom: 8px;
+}
+
+.menubtn.active span:first-child{
+  transform: rotate(45deg) translate(4px, 4px);
+}
+
+.menubtn.active span:last-child{
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+
+
+@media (max-width:575px) {
+  .sm_menu{
+    background-color: #ffffff;
+    padding: 0 2rem;
+    z-index: 999;
+    transition: .5s linear;
+    overflow: hidden;
+  }
+  .sm_menu ul li{
+    padding: .5rem 0;
+  }
+  .sm_menu ul li:not(:last-child){
+    border-bottom: 1px solid #d3d3d340;
+  }
+  .sm_menu ul button,
+  .sm_menu ul a{
+    text-decoration: none;
+    color: #000;
+    opacity: .5;
+    border: none;
+    background: transparent;
+  }
+}

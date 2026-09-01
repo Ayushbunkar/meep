@@ -1,0 +1,2011 @@
+.container {
+  height: calc(100vh - 32px) !important;
+  width: calc(100vw - 3rem) !important;
+  overflow-y: auto;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  margin: auto;
+  margin-top: 1rem;
+  border-radius: 25px;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+/* ----------------------Hero ------------------- */
+
+.hero {
+  background: var(--grd-dark);
+  height: fit-content;
+  border-radius: 25px;
+  /* padding-bottom: 1rem; */
+  min-height: calc(100vh - 68px);
+  z-index: 1;
+}
+
+.hero > div:first-child {
+  height: calc(100vh - 68px);
+  padding-bottom: 1rem;
+}
+
+.hero .slider {
+  /*-----------not in use-------*/
+  padding: 1.5rem;
+  width: 450px;
+  border: 2px solid #ffffff63;
+  background: var(--grd-light2);
+  /* margin: 3.5rem; */
+  margin: 0 3.5rem;
+  /* margin-top: 0rem; */
+  border-radius: 40px;
+  backdrop-filter: blur(86.69999694824219px);
+}
+
+.hero .slider .card {
+  /*-----------not in use-------*/
+  color: var(--light);
+  padding: 1.5rem;
+}
+
+.hero .slider .card:not(:first-child) {
+  /*-----------not in use-------*/
+  margin-top: 1.5rem;
+  opacity: 0.7;
+}
+
+.hero .slider .card p {
+  /*-----------not in use-------*/
+  opacity: 0.8;
+}
+
+.hero .slider .card > div:first-child {
+  /*-----------not in use-------*/
+  font-family: var(--font-sans);
+  letter-spacing: -0.04em;
+}
+
+.hero .slider .card > div:first-child h2 {
+  /*-----------not in use-------*/
+  font-size: 55px;
+  font-weight: 400;
+  line-height: 55px;
+}
+
+.hero .slider .card > div:first-child p {
+  /*-----------not in use-------*/
+  font-family: var(--font-varela);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+.hero h1 {
+  font-family: var(--font-varela);
+  font-size: 130px;
+  font-weight: 400;
+  line-height: 156.52px;
+  letter-spacing: -0.04em;
+  color: var(--light);
+}
+
+.hero .right button {
+  padding: 0.5rem 4.5rem;
+  border-radius: 500px;
+  background: linear-gradient(95.85deg, #c3d7fc -78.43%, #ffffff 101.69%);
+  border: 2px solid var(--light);
+}
+
+.hero .right button span {
+  font-size: 100px;
+  line-height: 120.4px;
+}
+
+.hero .bottom {
+  background-color: #ffffffbd;
+  backdrop-filter: blur(86.69999694824219px);
+  padding: 1rem 2rem;
+  margin: 0rem 1rem;
+  border-radius: 20px;
+  border: 2px solid var(--light);
+  /* backdrop-filter: blur(12px); */
+}
+
+.hero .bottom h3 {
+  font-family: var(--font-varela);
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 54.18px;
+  letter-spacing: -0.04em;
+  width: 36%;
+}
+
+.hero .bottom > div:not(:last-child) {
+  width: 32%;
+}
+
+.hero .scene {
+  z-index: -1;
+}
+
+.hero .bottom > div h4 {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 35px;
+  letter-spacing: -0.04em;
+  color: #043095;
+}
+
+.hero .bottom > div:not(:last-child) p {
+  opacity: 0.6;
+}
+
+.hero .bottom > div h4 span {
+  border: 1px solid #043095;
+  font-size: 20px;
+  padding: 0rem 0.81rem;
+  border-radius: 50px;
+}
+
+/* ===================================Section1==================== */
+
+.section1 {
+  background-color: #c9e4ff;
+  border-radius: 25px;
+
+  letter-spacing: -0.04em;
+  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+}
+.section1 h2 {
+  font-size: 60px;
+  transition: 0.5s;
+}
+
+.section1 > p {
+  font-size: 20px;
+  line-height: 26px;
+  width: 630px;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.section1 .content{
+  top: 6rem;
+}
+
+.section1 .btnDiv {
+  margin-top: 5rem;
+   bottom: 6rem;
+}
+
+.section1 .btnDiv a {
+  border: 1px solid #005aff;
+  border-radius: 33px;
+  padding: 0.5rem 0.5rem;
+  padding-left: 1.5rem;
+  width: 270px;
+}
+
+.section1 .btnDiv .inside {
+  border: 1px solid white;
+}
+
+.section1 .btnDiv a span {
+  background: linear-gradient(97.12deg, #1b6cff 19.05%, #7dabff 123.91%);
+  padding: 0.7rem;
+  border-radius: 50px;
+}
+
+.section1 .btnDiv .inside span {
+  background: transparent;
+  padding: 0.7rem;
+  border-radius: 50px;
+}
+
+.section1 .btnDiv a span img {
+  width: 25px;
+  transform: rotate(-90deg);
+}
+
+/* ===============================Section2======================== */
+
+.section2 {
+  background-color: #c9e4ff;
+  border-radius: 25px;
+  padding: 1rem 2rem;
+  letter-spacing: -0.04em;
+  min-height: 100vh;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  /* transition: opacity 1.5s linear, display 1s linear allow-discrete;
+  display: none; */
+}
+
+.section2 .left,
+.section2 .top {
+  position: relative;
+  z-index: 2;
+}
+
+.section2 .top h2 {
+  font-size: 70px;
+  font-weight: 400;
+  line-height: 84.28px;
+  white-space: nowrap;
+}
+
+.section2 .top > h2:nth-child(2) {
+  opacity: 0;
+}
+
+.section2 .bottom h3 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 35px;
+}
+
+.section2 .bottom h3 span {
+  font-size: 22px;
+  line-height: 30px;
+  border: 1px solid #2b57bd;
+  border-radius: 10px;
+  padding: 0 5px;
+}
+
+.section2 .right,
+.section2 .left {
+  width: 24%;
+}
+
+.section2 .right p,
+.section2 .left p {
+  opacity: 0.45;
+  line-height: 18px;
+}
+
+.section2 .right .internal_card p,
+.section2 .left .internal_card p {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.section2 .right .internal_card div p,
+.section2 .left .internal_card div p {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+  opacity: 0.7;
+}
+
+.section2 .right .internal_card:first-child,
+.section2 .left .internal_card:first-child {
+  border-bottom: 1px solid #004dff29;
+}
+
+.section2 .left > div:nth-child(2),
+.section2 .right > div:nth-child(2) {
+  padding: 1rem;
+}
+
+.section2 .right h3,
+.section2 .left h3 {
+  font-size: 27px;
+  line-height: 32px;
+}
+
+.section2 .center {
+  width: 100%;
+  z-index: -1;
+}
+
+.section2 .center {
+  height: 100vh;
+  top: -10px;
+}
+
+.section2 .center img {
+  height: 100%;
+  opacity: 0;
+}
+
+/* -------------------- extra for section3 ------------ */
+.section21 {
+  background: transparent;
+  top: 18vh;
+  padding-top: 0;
+  min-height: fit-content;
+  height: 80vh;
+  margin-bottom: 5rem;
+}
+
+.section2 .left2 {
+  width: 45%;
+  transition: 1s linear;
+  position: relative;
+  z-index: 2;
+  padding-left: 1rem;
+  /* transition: opacity 1s linear, transform 1s linear, display 2s linear allow-discrete; */
+}
+
+.section2 .left2 .card > div:first-child span {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  border-radius: 20px;
+  border: 1px solid #2b57bd;
+  font-family: var(--font-varela);
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36.12px;
+  letter-spacing: -0.04em;
+  color: #2b57bd;
+}
+
+.section2 .left2 .card:first-child > div:first-child span {
+  background-color: #185eff;
+  color: var(--light);
+}
+
+.section2 .left2 .card {
+  letter-spacing: -0.04em;
+  height: 150px;
+}
+
+.section2 .left2 .card:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.section2 .left2 .card > div:first-child div {
+  height: calc(100% - 61px);
+  width: 2px;
+  background-color: #3579e0;
+}
+
+.section2 .left2 .card h3 {
+  font-family: var(--font-varela);
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36.12px;
+}
+
+.section2 .left2 .card p {
+  opacity: 0.45;
+}
+
+/* =======================Section3 ========================= */
+
+.section3 {
+  border-radius: 25px;
+  background: linear-gradient(0deg, #ffffff 55.55%, #005aff 355.57%);
+  min-height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  /* margin-bottom: 24vh; */
+  margin-bottom: 160px;
+  /* display: none; */
+  /* opacity: 0;
+  transition: opacity 1s linear, display 0.5s linear allow-discrete; */
+}
+
+.section3.active {
+  /*-----------not in use-------*/
+  opacity: 1;
+  display: flex;
+}
+
+.section3 .top {
+  padding: 1rem 2rem;
+  transition: 1s linear;
+}
+
+.section3.active .top {
+  opacity: 1;
+}
+
+.section3 .top h2 {
+  font-size: 50px;
+  line-height: 60px;
+  font-family: var(--font-varela);
+  width: 270px;
+}
+
+.section3 .top h2 span {
+  border: 1px solid #2b57bd;
+  border-radius: 20px;
+  padding: 0 1rem;
+}
+
+.section3 .top p {
+  color: rgb(45 45 45 / 50%);
+  width: 45%;
+  font-weight: 500;
+}
+
+.section3 .top button {
+  border-radius: 100px;
+  font-family: var(--font-inter);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.04em;
+  background: linear-gradient(97.12deg, #1b6cff 19.05%, #7dabff 123.91%);
+  border: none;
+  text-wrap: nowrap;
+  padding: 0.5rem 1.5rem;
+  color: var(--light);
+  box-shadow: 0px 4px 250px 0px #84a0d640;
+}
+
+.section3 .bottom {
+  padding: 1rem 2.5rem;
+  background: var(--grd-dark);
+  border-radius: 25px;
+  min-height: calc(100vh - 192px);
+}
+
+.section3.active .bottom {
+  transform: translateY(0);
+  display: block;
+}
+
+.section3 .bottom .left,
+.section3 .bottom .right {
+  width: 31%;
+}
+
+.section3.active .bottom .left,
+.section3.active .bottom .right {
+  /** Not in Use ------------*/
+  display: block;
+  transform: translateX(0);
+}
+
+.section3 .bottom .card {
+  padding: 2rem;
+  background-color: var(--light);
+  border-radius: 25px;
+  background: radial-gradient(
+    303.75% 151.37% at 45.37% 67.31%,
+    #ffffff 15.57%,
+    #7dabff 100%
+  );
+}
+
+.section3 .center > div {
+  z-index: -1;
+  min-width: 50%;
+  /* width: 740px; */
+  /* height: 890px; */
+  width: 100vw;
+  height: calc(100% + 3rem);
+  top: -3.5rem;
+  /* left: 25%; */
+  left: 0;
+  transition: 0.5s linear;
+}
+
+.section3 .center > div canvas {
+  width: fit-content;
+  height: fit-content;
+}
+
+.section3.active .center div {
+  /** Not in Use ------------*/
+  /* transform: translate(-50%, -57.5%) scale(1); */
+  opacity: 1;
+}
+
+.section3 .card h3 {
+  font-family: var(--font-varela);
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 37px;
+  letter-spacing: -0.03em;
+  margin-bottom: 0;
+  position: absolute;
+  width: 73%;
+  /* opacity: 0; */
+  transition: 0.5s linear;
+}
+
+.section3 .card > div > h3:nth-child(2) {
+  opacity: 0;
+}
+
+/* .section3 .card h3.second_h {
+  width: 73%;
+} */
+
+.section3 .card h3.active {
+  /** Not in Use ------------*/
+  /* display: block; */
+  opacity: 1;
+  position: static;
+}
+
+.section3 .card div img {
+  width: 35px;
+}
+
+.section3 .card div {
+  margin-bottom: 2rem;
+}
+
+.section3 .card p {
+  opacity: 0.6;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+@starting-style {
+  /** Not in Use ------------*/
+  .section3.active {
+    opacity: 0;
+  }
+
+  .section3.active .bottom {
+    transform: translateY(200%);
+  }
+
+  .section3.active .bottom .left {
+    transform: translateX(-400%);
+  }
+
+  .section3.active .bottom .right {
+    transform: translateX(400%);
+  }
+
+  /* .section3 .card h3.active{
+  opacity: 0;
+} */
+}
+
+/* ======================================AI & DAO section =========================== */
+.ai_dao {
+  /* background: linear-gradient(180deg, #ffffff 55.55%, #005aff 355.57%); */
+  position: sticky;
+  top: -0px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--light);
+  min-height: calc(100vh - 2rem);
+  background: linear-gradient(
+    179.68deg,
+    #0b61ff -232.87%,
+    #f2f7ff 11.31%,
+    #ffffff 50.47%,
+    #f5f8ff 85.93%,
+    #005aff 396.77%
+  );
+}
+
+.ai_dao .top {
+  height: calc(100vh - 2rem);
+  /* background: var(--grd-dark); */
+  border-radius: 20px;
+  overflow: hidden;
+  z-index: 1;
+  width: 50%;
+}
+
+.ai_dao .top > div:first-child {
+  padding: 2rem 3rem;
+}
+
+.ai_dao .bottom h2 {
+  font-size: 52px;
+  font-family: var(--font-varela);
+  letter-spacing: -4px;
+  /* opacity: 0; */
+  /* color: #0046E7; */
+}
+
+.ai_dao .bottom h2 span {
+  /* color: var(--light); */
+  border: 1px solid #3a93fd;
+  border-radius: 25px;
+  padding: 0 18px;
+}
+
+/* .ai_dao .img{
+  background: #005aff;
+} */
+.ai_dao .img img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.ai_dao .bottom {
+  /* background: linear-gradient(180deg, #ffffff 55.55%, #005aff 355.57%); */
+  padding: 1rem 3rem;
+  border-radius: 0 0 20px 20px;
+  width: 50%;
+}
+
+.ai_dao .card {
+  opacity: 0;
+}
+
+.ai_dao .card h3 {
+  font-size: 35px;
+  font-family: var(--font-varela);
+}
+
+.ai_dao .card p {
+  line-height: 21px;
+  opacity: 0.45;
+}
+
+/* ============================================ Section4 =================== */
+
+.section4 {
+  background: var(--grd-dark);
+  padding: 2rem;
+  padding-bottom: 4rem;
+  border-radius: 25px;
+  min-height: calc(100vh + 1rem);
+}
+
+.section4.active {
+  /** Not in Use ------------*/
+  transform: translateY(0);
+  display: block;
+}
+
+.section4 h2 {
+  font-family: var(--font-varela);
+  font-size: 110px;
+  font-weight: 400;
+  line-height: 155px;
+  letter-spacing: -0.05em;
+  color: #fff;
+}
+
+.section4 h2.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.section4 h2 img {
+  background: linear-gradient(-95.85deg, #c3d7fc -78.43%, #ffffff 101.69%);
+  padding: 1.5rem;
+  width: 125px;
+  border-radius: 200px;
+  transform: rotate(-90deg);
+}
+
+.section4 .card.active {
+  /** Not in Use ------------*/
+  transform: translateX(0);
+}
+
+.section4 > div:nth-child(2) {
+  height: calc(100vh - 300px);
+}
+
+.section4 .card {
+  width: 100%;
+}
+
+.section4 .card p {
+  font-family: var(--font-varela);
+  font-size: 43px;
+  font-weight: 400;
+  line-height: 51.77px;
+  letter-spacing: -0.04em;
+  color: var(--light);
+}
+
+.section4 .card button span {
+  font-family: var(--font-varela);
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 120.4px;
+  letter-spacing: -0.04em;
+}
+
+.section4 .card button {
+  background: linear-gradient(95.85deg, #c3d7fc -78.43%, #ffffff 101.69%);
+  border: 2px solid var(--light);
+  border-radius: 200px;
+  padding: 0.5rem 3.5rem;
+}
+
+.section4 .scene {
+  min-height: calc(100vh - 2rem);
+  height: calc(100vh - 2rem);
+  top: 0;
+}
+
+.section4 > img {
+  transform: translateY(50%);
+  transition: 1s linear;
+}
+
+.section4.active > img {
+  transform: translateY(0);
+}
+
+/* -----------------------------------Top And Bottom Common CSS-------------- */
+.hero .social,
+.section4 .contract,
+.section4 .social {
+  border-radius: 50px;
+  padding: 0.5rem 1.5rem;
+  /* background-color: #ffffffbd; */
+  /* backdrop-filter: blur(86.69999694824219px); */
+  background: linear-gradient(120deg, #e4edff 20%, #ffffff);
+  border: 2px solid var(--light);
+  color: #3774fe;
+}
+
+.hero .social {
+  top: -1rem;
+  left: 0;
+  transform: translateY(-100%);
+}
+
+.section4 .social {
+  left: 2rem;
+  bottom: 4rem;
+}
+
+.hero .social img,
+.section4 .social img {
+  width: 22px;
+}
+
+.hero .social p,
+.section4 .social p {
+  color: #2a5ed6;
+  white-space: nowrap;
+  font-family: var(--font-varela);
+}
+
+.section4 .contract {
+  bottom: 4rem;
+  right: 2rem;
+}
+.section4 .contract button:hover img {
+  opacity: 0.6;
+}
+.section4 .contract span {
+  border: 1px solid #005aff;
+  font-size: 14px;
+  display: none;
+}
+.section4 .contract a {
+  color: #5d5d5d;
+}
+
+@starting-style {
+  /** Not in Use ------------*/
+  .section4.active {
+    transform: translateY(200px);
+  }
+
+  .section4 h1.active {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  .section4 .card.active {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fadeUp {
+  /** Not in Use ------------*/
+  100% {
+    transform: translateY(-120%);
+    display: none;
+  }
+}
+
+@keyframes fadeDown {
+  /** Not in Use ------------*/
+  0% {
+    transform: translateY(-120%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fadeLeft {
+  /** Not in Use ------------*/
+  0% {
+    transform: translateX(-120%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes fadeRight {
+  /** Not in Use ------------*/
+  0% {
+    transform: translateX(120%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@media (min-width: 1700px) {
+  .section2 .left2 {
+    width: 32%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero .bottom {
+    height: 223px;
+    padding: 1rem 3rem;
+  }
+
+  /* ------------------------------Section2 ----------------- */
+
+  .section2 {
+    padding: 2rem 3rem;
+  }
+
+  .section21 {
+    padding-top: 0;
+  }
+
+  .section2 .right p,
+  .section2 .left p {
+    line-height: 22px;
+  }
+
+  .section2 .left > div:nth-child(2),
+  .section2 .right > div:nth-child(2) {
+    padding: 1.5rem 2rem;
+  }
+
+  /* -----------------------Section3 start -------------- */
+  .section3 {
+    margin-bottom: 192px;
+  }
+
+  .section3 .top {
+    padding: 2rem 3rem;
+  }
+
+  .section3 .bottom {
+    min-height: calc(100vh - 224px);
+    padding: 3rem;
+  }
+
+  .section3 .bottom .card {
+    height: 210px;
+  }
+
+  .section3 .bottom .left,
+  .section3 .bottom .right {
+    width: 31.7%;
+  }
+
+  .section3 .bottom .card div {
+    margin-top: 1rem;
+  }
+
+  /* -----------------------------------AI & DAO section---------------- */
+
+  /* .ai_dao .top {
+    height: calc(100vh - 2rem);
+  } */
+
+  .ai_dao .bottom {
+    padding: 3rem;
+  }
+  .ai_dao .card h3 {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  /* -----------------------------------section4---------------- */
+  .section4 .card {
+    width: fit-content;
+  }
+
+  .section4 .card p {
+    padding-left: 3rem !important;
+  }
+
+  .section4 .social {
+    /* bottom: 2rem; */
+    left: 2rem;
+  }
+
+  /* .section4 .contract{
+  bottom: 2rem;
+} */
+}
+
+@media (min-width: 1800px) {
+  .hero .right {
+    margin-right: 7rem !important;
+  }
+
+  .hero .bottom h3 {
+    font-size: 55px;
+    line-height: 65px;
+    /* margin-bottom: 1.5rem; */
+  }
+
+  .hero .bottom > div h4 {
+    font-size: 35px;
+    line-height: 45px;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero .bottom > div p {
+    font-size: 20px;
+  }
+
+  .hero .bottom {
+    height: 16rem;
+    margin: 1rem 2rem;
+    padding: 2rem 5rem;
+  }
+
+  /* ------------------Section2 -------------- */
+  .section2 {
+    padding: 3rem 5rem;
+  }
+
+  .section2 .top h2 {
+    font-size: 85px;
+    line-height: 102px;
+  }
+
+  .section2 .bottom h3 {
+    font-size: 40px;
+    line-height: 45px;
+    margin-bottom: 1rem;
+  }
+
+  .section2 .right,
+  .section2 .left {
+    width: 20.5%;
+  }
+
+  .section2 .bottom h3 span {
+    font-size: 35px;
+    line-height: 40px;
+    padding: 0 7px;
+  }
+
+  .section2 .right p,
+  .section2 .left p {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 1.5rem;
+  }
+
+  .section2 .right .internal_card p,
+  .section2 .left .internal_card p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .section2 .right .internal_card div p,
+  .section2 .left .internal_card div p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .section2 .right > div:last-child h3,
+  .section2 .left > div:last-child h3 {
+    font-size: 35px;
+    line-height: 40px;
+    margin-top: 3rem;
+  }
+
+  .section21 {
+    padding-top: 0;
+  }
+
+  /* -------------------------Section3 ------------------- */
+
+  .section3 .top {
+    padding: 2rem 5rem;
+  }
+
+  .section3 .bottom {
+    padding: 5rem;
+  }
+
+  .section3 .center > div {
+    bottom: -5rem;
+  }
+
+  .section3 .bottom .card {
+    height: 272px;
+    padding: 3rem;
+  }
+
+  /* ---------------------------------AI & Dao section--------------------- */
+
+  .ai_dao .bottom {
+    padding: 5rem;
+  }
+  /* .ai_dao .top {
+    height: calc(100vh - 350px);
+  } */
+
+  .ai_dao .bottom p {
+    line-height: 24px;
+    font-size: 18px;
+    margin-top: 1rem;
+  }
+
+  /* -------------------------------Section4 --------------------- */
+
+  .section4 > div:nth-child(2) {
+    /* justify-content: space-around !important; */
+    margin-right: 5vw;
+  }
+}
+
+@media (max-width: 1300px) {
+  /* ------------------------Hero --------------------- */
+  .hero .right {
+    margin-top: 1.5rem !important;
+  }
+
+  .hero .bottom {
+    margin: 0rem 1rem;
+  }
+
+  /* -----------------------------Section2----------------- */
+  .section2 .right,
+  .section2 .left {
+    width: 30%;
+  }
+
+  /* ----------------------------Section3------------------- */
+
+  .section3 .card h3 {
+    width: 80%;
+  }
+
+  .section3 .card p {
+    line-height: 18px;
+  }
+
+  .section3 .left > .card:last-child,
+  .section3 .right > .card:last-child {
+    margin-top: 1rem !important;
+  }
+
+  /* --------------------------------Ai Dao --------------------- */
+  /* .ai_dao .top {
+    height: calc(100vh - 245px);
+  } */
+
+  .ai_dao .card h3 {
+    font-size: 30px;
+  }
+
+  .ai_dao .card p {
+    line-height: 20px;
+  }
+
+  /* ---------------------------Section4----------------------- */
+  .section4 h2 {
+    font-size: 100px;
+    line-height: 140px;
+  }
+
+  .section4 h2 img {
+    width: 100px;
+  }
+}
+
+@media (max-width: 1199px) {
+  /* -------------------------hero ----------------------- */
+  .hero h1 {
+    font-size: 115px;
+    line-height: 130px;
+  }
+
+  .hero .right button span {
+    font-size: 90px;
+    line-height: 110px;
+  }
+
+  .hero .bottom h3 {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    font-size: 40px;
+    line-height: 45px;
+  }
+
+  .hero .bottom > div:not(:last-child) {
+    width: 45%;
+  }
+
+  /* ------------------Section2 ------------------ */
+  .section2 {
+    padding: 0rem 2rem;
+  }
+
+  .section21 {
+    padding-top: 0;
+    top: calc(18vh - 1rem);
+  }
+
+  .section2 .right,
+  .section2 .left {
+    width: 30%;
+  }
+
+  .section2 .left > div:nth-child(2),
+  .section2 .right > div:nth-child(2) {
+    padding: 0.5rem 1rem;
+  }
+
+  .section2 .left2 {
+    min-width: 60%;
+  }
+
+  /* -----------------Secton3 ------------------ */
+
+  .section3 .bottom .card {
+    height: 200px;
+  }
+
+  .section3 .bottom .left,
+  .section3 .bottom .right {
+    width: 35%;
+  }
+
+  .section3 .left .card,
+  .section3 .right .card {
+    padding: 2rem 1rem;
+  }
+
+  /* .section3 .center>div {
+    min-width: 50px;
+    width: 750px;
+  } */
+
+  /* .section3 .center>div {
+    top: -2.5rem;
+    left: 15%;
+  } */
+
+  /* --------------------------AI------------------ */
+
+  /* .ai_dao .top {
+    height: calc(100vh - 255px);
+  } */
+
+  .ai_dao .top > div:first-child {
+    padding: 2rem;
+  }
+
+  .ai_dao .bottom {
+    padding: 1rem 2rem;
+  }
+
+  /* ------------------- Section4 ------------ */
+
+  .section4 h2 {
+    font-size: 80px;
+    line-height: 120px;
+  }
+
+  .section4 h2 img {
+    width: 90px;
+  }
+
+  .section4 .social {
+    bottom: 5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  /* -----------------------Section1 ----------------- */
+
+  .section1 .btnDiv {
+    flex-wrap: wrap;
+  }
+
+  /* -----------------------Section2------------------------- */
+  .section2 .top h2 {
+    font-size: 55px;
+  }
+
+  .section2 {
+    padding: 2rem 1rem;
+    height: 200vh;
+  }
+
+  .section21 {
+    height: fit-content;
+  }
+
+  .section2 .right,
+  .section2 .left {
+    width: 50%;
+  }
+
+  .section2 .right {
+    opacity: 0;
+    position: absolute;
+    top: 125px;
+  }
+
+  .section2 .center {
+    left: 15%;
+  }
+
+  /* -------------------------------- Section3 ------------------- */
+  .section3 .bottom {
+    padding: 2rem;
+  }
+
+  .section3 .right .card:last-child,
+  .section3 .left .card:last-child {
+    margin-top: 2rem !important;
+  }
+
+  .section3 .bottom .left,
+  .section3 .bottom .right {
+    width: 45%;
+    margin-top: 7rem;
+  }
+
+  .section3 .center > div {
+    z-index: -1;
+  }
+
+  /* -----------------------Ai ---------------------- */
+  /* 
+  .ai_dao .top {
+    height: calc(100vh - 298px);
+  } */
+
+  .ai_dao .bottom {
+    height: 266px;
+  }
+
+  /* --------------------Section4 csss ------------ */
+  .section4 {
+    padding: 2rem 1rem;
+  }
+
+  .section4 h2 {
+    font-size: 60px;
+  }
+
+  .section4 h2 img {
+    width: 70px;
+    padding: 1rem;
+  }
+
+  .section4 .card button span {
+    font-size: 60px;
+    line-height: 80px;
+  }
+
+  .section4 .card {
+    width: fit-content;
+  }
+
+  .section4 .contract {
+    right: unset;
+    left: 2rem;
+    bottom: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  /* ------------------------------Hero --------------------- */
+  .hero h1 {
+    font-size: 110px;
+    line-height: 140px;
+  }
+
+  .hero .right button {
+    padding: 0.5rem 2.5rem;
+  }
+
+  .hero .right button span {
+    font-size: 90px;
+    line-height: 110px;
+  }
+
+  .hero .bottom > div:not(:last-child) {
+    width: 100%;
+  }
+
+  .hero .bottom h3 {
+    font-size: 35px;
+    line-height: 40px;
+  }
+
+  /* --------------------------Section1-------------------- */
+  .section1 h2 {
+    font-size: 50px;
+  }
+
+  .section1 > p {
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 100%;
+  }
+
+  .section1 .btnDiv a:first-child > img {
+    width: 230px;
+  }
+
+  /* -------------------------------Section 2------------------- */
+  .section2 .top h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .section21 {
+    padding-top: 0;
+  }
+
+  .section2 .center.active {
+    /*------Not in use -------*/
+    width: 100%;
+    height: 790px !important;
+    position: static !important;
+  }
+
+  .section2 .left,
+  .section2 .left2 {
+    min-width: 100%;
+  }
+
+  .section2 .right {
+    top: 92px;
+    min-width: calc(100% - 2rem);
+  }
+
+  .section2 .center {
+    top: unset !important;
+    bottom: calc(100vh + 14px);
+    width: 100%;
+  }
+
+  .section2 .center {
+    left: 0%;
+  }
+
+  /* -------------------------------Section3 ----------------- */
+  .section3 {
+    top: -272px;
+  }
+
+  .section3 .top {
+    height: 272px;
+  }
+
+  .section3 .top p {
+    width: 100%;
+    margin-bottom: 0rem;
+  }
+
+  .section3 .bottom {
+    position: relative;
+    gap: 3rem !important;
+    overflow: hidden;
+    height: calc(100vh - 2rem);
+  }
+
+  .section3 .bottom .center {
+    position: static !important;
+  }
+
+  .section3 .bottom .left,
+  .section3 .bottom .right {
+    width: 100%;
+    margin-top: 0rem;
+  }
+
+  .section3 .right .card:last-child,
+  .section3 .left .card:last-child {
+    margin-top: 1rem !important;
+  }
+
+  /* .section3 .center>div {
+    bottom: 0rem;
+  } */
+
+  .section3 .right .card,
+  .section3 .left .card {
+    padding: 1rem;
+  }
+
+  .section3 .bottom .card {
+    height: fit-content;
+  }
+
+  .section3 .card h3 {
+    font-size: 30px;
+    line-height: 33px;
+  }
+
+  .section3 .card div {
+    margin-bottom: 0.5rem;
+  }
+
+  .section3 .center > div {
+    /* left: -5%; */
+    top: 18%;
+  }
+
+  /* ------------------------------Ai -------------------- */
+  .ai_dao .top {
+    height: calc(100vh - 382px);
+  }
+
+  .ai_dao .bottom {
+    height: 350px;
+  }
+
+  /* -------------------- Section4 css --------------------- */
+
+  .section4 h2 {
+    line-height: 60px;
+  }
+
+  .section4 h2 img {
+    transform: rotate(0);
+  }
+
+  .section4 > div:nth-child(2) {
+    height: calc(100vh - 340px);
+  }
+
+  .section4 .card p {
+    font-size: 35px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    width: calc(100vw - 2rem);
+  }
+
+  /* ---------------------------Hero ----------------------- */
+  .hero {
+    height: fit-content;
+  }
+
+  .hero > div:first-child {
+    height: fit-content;
+    padding-bottom: 0;
+  }
+
+  .hero h1 {
+    font-size: 55px;
+    line-height: normal;
+  }
+
+  .hero .right {
+    height: 400px;
+    padding-left: 0 !important;
+  }
+
+  .hero .right button {
+    padding: 0.5rem 1.5rem;
+  }
+
+  .hero .right button img {
+    width: 35px;
+  }
+
+  .hero .right button span {
+    font-size: 40px;
+    line-height: normal;
+  }
+
+  .hero .bottom {
+    margin: 0;
+    padding: 2rem;
+  }
+
+  .hero .bottom > div h4 {
+    font-size: 20px;
+    line-height: normal;
+  }
+
+  .hero .bottom > div:not(:last-child) {
+    margin-top: 2rem;
+  }
+
+  .hero .scene {
+    height: 600px !important;
+    transform: unset !important;
+    top: 0 !important;
+    width: 180% !important;
+  }
+
+  .hero .social {
+    left: 50%;
+    transform: translate(-50%, -100%);
+  }
+
+  /* ----------------------Section1 csss-------------------- */
+  .section1 .content{
+    top: 2rem;
+  } 
+  .section1 .btnDiv{
+    bottom: 2rem;
+   }
+  .section1 .btnDiv a {
+    width: 100%;
+  }
+
+  .section1 h2 {
+    font-size: 40px;
+  }
+
+  .section2 p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  /* --------------------------------Section2 css ------------- */
+  .section2 {
+    position: relative;
+    height: fit-content;
+  }
+
+  .section2 .top h2 {
+    font-size: 36px;
+    white-space: wrap;
+    line-height: normal;
+  }
+
+  .section2 .bottom {
+    padding: 2rem 1rem;
+  }
+
+  .section2 .left > div:nth-child(2),
+  .section2 .right > div:nth-child(2) {
+    padding: 1.5rem;
+    margin: 2.5rem;
+  }
+
+  .section2 .right .internal_card:first-child,
+  .section2 .left .internal_card:first-child {
+    padding-bottom: 2rem !important;
+  }
+
+  .section2 .right .internal_card:nth-child(2),
+  .section2 .left .internal_card:nth-child(2) {
+    padding-top: 2rem !important;
+  }
+
+  .section2 .bottom h3 span,
+  .section2 .bottom h3 {
+    font-size: 22px;
+    line-height: normal;
+  }
+
+  .section2 .right {
+    position: static;
+    min-height: fit-content;
+    opacity: 1;
+    width: 100%;
+  }
+
+  .section2 .right > div:last-child {
+    margin-top: 2.5rem !important;
+  }
+
+  .section2 .bottom .gaper {
+    height: 600px;
+  }
+
+  .section2 .center {
+    height: 600px;
+    bottom: 0;
+    z-index: 2;
+    top: unset !important;
+  }
+
+  .section21 {
+    background-color: #c9e4ff;
+    border-radius: 0 0 20px 20px;
+    margin-top: -2rem;
+    padding-top: 2rem;
+    top: 0;
+  }
+
+  .section2 .left2 .card {
+    height: fit-content;
+  }
+  .section2 .left2 {
+    padding-left: 0;
+  }
+
+  /* -------------------------Section3 css ----------------------- */
+  .section3 {
+    position: static;
+    margin-bottom: 1rem;
+  }
+
+  .section3 .top {
+    padding: 2rem;
+    gap: 1rem;
+    height: fit-content;
+  }
+
+  .section3 .top button {
+    width: 100%;
+  }
+
+  .section3 .top h2 {
+    width: 100%;
+    font-size: 36px;
+    line-height: normal;
+  }
+
+  .section3 .top h2 span {
+    padding: 0 0.5rem;
+    border-radius: 15px;
+  }
+
+  .section3 .bottom {
+    padding: 1rem;
+    /* width: 100%; */
+    gap: 0.51rem !important;
+    height: fit-content;
+  }
+
+  .section3 .bottom .card {
+    height: 250px;
+  }
+
+  .section3 .card h3 {
+    /* width: 90%; */
+    position: static;
+  }
+
+  .section3 .card h3.second_h {
+    display: none;
+  }
+
+  .section3 .card .para2 {
+    display: none;
+  }
+
+  .section3 .bottom .gaper {
+    height: 600px;
+  }
+
+  .section3 .center > div {
+    bottom: 0;
+    top: unset;
+    height: 600px;
+    z-index: 2;
+  }
+
+  /* .section3 .center>div {
+    left: -15%;
+  } */
+
+  /* ------------------------Section Ai ------------- */
+  .ai_dao {
+    min-height: fit-content;
+    position: relative;
+  }
+
+  .ai_dao .bottom h2 {
+    font-size: 40px;
+    letter-spacing: -1px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .ai_dao .bottom h2 span {
+    border-radius: 15px;
+    padding: 0 10px;
+  }
+
+  /* .ai_dao {
+    position: relative;
+    z-index: 22;
+    margin-bottom: 0 !important;
+  } */
+
+  .ai_dao .top {
+    width: 100%;
+    height: fit-content;
+  }
+  .ai_dao .top video {
+    width: 100%;
+  }
+
+  .ai_dao .bottom {
+    height: fit-content;
+    /* gap: 2rem !important; */
+    padding: 2rem;
+    width: 100%;
+  }
+
+  .ai_dao .card h3 {
+    font-size: 25px;
+  }
+
+  .ai_dao .card {
+    opacity: 1;
+  }
+
+  /* ------------------Section4 css ------------- */
+  .section4 {
+    min-height: 700px;
+    height: calc(100vh - 2rem);
+  }
+
+  .section4 h2 {
+    font-size: 35px;
+    line-height: normal;
+  }
+
+  .section4 h2 img {
+    width: 40px;
+    padding: 0.4rem;
+  }
+
+  .section4 .card p {
+    font-size: 25px;
+    line-height: normal;
+  }
+
+  .section4 .card button {
+    padding: 0.5rem 1.5rem;
+  }
+
+  .section4 .card button span {
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  .section4 .card button img {
+    width: 40px;
+  }
+
+  .section4 .scene {
+    width: 150% !important;
+    left: unset !important;
+    right: 0;
+  }
+  .section4 .social {
+    bottom: 7rem;
+  }
+  .section4 .contract,
+  .section4 .social {
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: no;
+  }
+  .section4 .contract {
+    border-radius: 1rem;
+    padding: 0.5rem 0.7rem;
+  }
+  .section4 .contract a {
+    width: 240px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .section4 .contract span {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 450px) {
+  /* .section3 {
+    top: -310px;
+  }
+
+  .section3 .top {
+    height: 310px;
+  } */
+
+  .section3 .card h3 {
+    font-size: 25px;
+  }
+
+  /* .section3 .center>div {
+    top: 15%;
+  } */
+
+  .section4 > div:nth-child(2) {
+    padding-top: 1.5rem !important;
+  }
+
+  .section4 h2 {
+    flex-direction: column;
+    gap: 0.5rem !important;
+    /* display: none; */
+  }
+}
+
+@media (max-width: 416px) {
+  .container {
+    width: calc(100vw - 1rem);
+  }
+
+  /* .hero h1 {
+    font-size: 65px;
+    line-height: 75px;
+  } */
+
+  /* .hero .right button {
+    padding: 0.5rem 1.5rem;
+  } */
+
+  /* .hero .right button span {
+    font-size: 50px;
+    line-height: 65px;
+  } */
+
+  .hero .bottom {
+    padding: 1rem;
+  }
+
+  .hero .bottom h3 {
+    font-size: 32px;
+  }
+
+  /* .hero .bottom>div h4 {
+    font-size: 23px;
+  } */
+
+  /* ------------------Section2 CSS------------------ */
+  .section2 .top h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  /* .section2 .top img {
+    width: 40px;
+  } */
+
+  /* .section2 .bottom h3,
+  .section2 .right>div:last-child h3,
+  .section2 .left>div:last-child h3 {
+    font-size: 25px;
+    line-height: 30px;
+  } */
+
+  /* .section2 .bottom h3 span {
+    font-size: 20px;
+  } */
+
+  .section2 .bottom {
+    padding: 2rem 0;
+  }
+
+  .section2 .right > div:nth-child(2),
+  .section2 .left > div:nth-child(2) {
+    /* padding: 1rem !important; */
+    margin: 2.5rem 1rem;
+  }
+
+  .section2 .left2 .card h3 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .section2 .left2 .card > div:first-child span {
+    font-size: 20px;
+    width: 35px;
+    height: 35px;
+    border-radius: 13px;
+  }
+
+  /* -----------------------Section3 css -------------- */
+  /* .section3 .center>div {
+    left: -45%;
+  } */
+  .section3 .top {
+    padding: 1rem;
+  }
+
+  .section3 .bottom {
+    padding: 1rem 0.5rem;
+  }
+
+  .section3 .bottom .card {
+    padding: 1rem;
+    height: 210px;
+  }
+
+  .section3 .card h3 {
+    font-size: 22px;
+  }
+
+  /* ----------------------Section AI --------------- */
+  /* .ai_dao .top>div:first-child {
+    padding: 1.5rem 1rem;
+  } */
+
+  /* .ai_dao .top>div:first-child img {
+    width: 40px;
+  } */
+
+  .ai_dao .bottom {
+    padding: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .ai_dao .top h2 {
+    font-size: 30px;
+  }
+
+  /* .ai_dao .top {
+    height: 40vh;
+  } */
+
+  /* .ai_dao .card h3 {
+    font-size: 25px;
+  } */
+
+  /* .ai_dao .card p {
+    margin-bottom: 0;
+  } */
+
+  /* ----------------------Section4 css ----------------*/
+  /* .section4 h1 {
+    font-size: 48px;
+    line-height: 50px;
+  } */
+
+  .section4 .card {
+    padding-right: 0 !important;
+  }
+
+  /* .section4 .card p {
+    font-size: 25px;
+    line-height: 30px;
+  } */
+
+  .section4 .card button {
+    padding: 0.5rem 1.5rem;
+  }
+
+  .section4 .scene {
+    min-height: 800px;
+  }
+
+  .section4 .social {
+    gap: 1.5rem !important;
+  }
+
+  /* .section4 .card button span {
+    font-size: 40px;
+    line-height: 50px;
+  } */
+}
+
+/* @media (max-height: 740px) and (max-width: 575px) {
+  .section3 .center>div {
+    top: 15%;
+  }
+} */

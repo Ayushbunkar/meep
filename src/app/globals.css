@@ -1,0 +1,132 @@
+:root {
+  --light: #ffffff;
+  --dark: #000;
+  --grd-light: linear-gradient(
+    179.68deg,
+    #0b61ff -232.87%,
+    #f2f7ff 11.31%,
+    #ffffff 50.47%,
+    #f5f8ff 85.93%,
+    #005aff 396.77%
+  );
+  --grd-light2: linear-gradient(
+    0deg,
+    rgba(143, 173, 227, 0.32) 42.89%,
+    rgba(255, 255, 255, 0.32) 86.68%
+  );
+  --grd-dark: linear-gradient(0deg, #cde1fc 25.73%, #005aff 108.15%);
+}
+
+@media (prefers-color-scheme: dark) {
+@import "tailwindcss";
+
+:root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  /* overflow-x: hidden; */
+  font-family: var(--font-inter);
+  /* height: 300vh; */
+  overflow: visible;
+  scrollbar-width: 0;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* canvas{
+  width: 100%;
+  height: 100%;
+} */
+
+.white-text {
+  font-family: var(--font-varela);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  color: white;
+}
+.grdtext {
+  font-family: var(--font-varela);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  /* background: linear-gradient(90deg, #2b57bd -10.7%, #3e98ff 100%); */
+  background: linear-gradient(120deg, #185eff, #5cc9ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* 
+.fadeup {
+  animation: fadeUp 1s linear !important;
+}
+.fadedown {
+  animation: fadeDown 1s linear !important;
+}
+.fadeleftin {
+  animation: fadeLeft 1s linear !important;
+}
+.faderightin {
+  animation: fadeRight 1s linear !important;
+}
+.fadeleftout {
+  animation: fadeLeft 1s linear !important;
+}
+.faderightout {
+  animation: fadeRight 1s linear !important;
+}
+@keyframes fadeUp {
+  100% {
+    transform: translateY(-120%);
+    display: none;
+  }
+}
+@keyframes fadeDown {
+  0% {
+    transform: translateY(120%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes fadeLeft {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes fadeRight {
+  0% {
+    transform: translateX(120%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes fadeRightout {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}
+@keyframes fadeleftout {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+} */
