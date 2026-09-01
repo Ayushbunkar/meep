@@ -66,12 +66,13 @@ export const Nav = () => {
           >
             Pitch Deck
           </a>  
-          <a
-  href="/pricing"
-  className="text-decoration-none mx-2 md:mx-3"
->
-  Pricing
-</a>
+          <button
+            onClick={() => {
+              scroller("pricing");
+            }}
+          >
+            Pricing
+          </button>
         </div>
         <div className={style.right + " d-none d-sm-block"}>
           {/* <a href="https://memecoinist.com/wp-content/uploads/2025/04/Meep-AI-Pitch-deck.pdf"

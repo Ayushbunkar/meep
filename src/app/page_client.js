@@ -18,6 +18,8 @@ import { AssetProvider } from "@/Component/context/AssetContext";
 
 
 
+import PricingPage from "@/app/pricing/page";
+
 gsap.registerPlugin(ScrollTrigger, useGSAP, ScrollSmoother);
 
 export default function Home() {
@@ -128,6 +130,9 @@ export default function Home() {
             ></div>
             <Ai_Dao />
             <Section4 />
+            <div id="pricing">
+              <PricingPage />
+            </div>
           </div>
         </main>
       </AssetProvider>
