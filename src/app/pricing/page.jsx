@@ -1157,7 +1157,6 @@ export default function PricingPage() {
             "
           >
             <div
-              ref={cardsGridRef}
               className="
                 grid
                 grid-cols-4
@@ -1165,7 +1164,6 @@ export default function PricingPage() {
 
                 max-xl:grid-cols-2
                 max-md:grid-cols-1
-                will-change-transform
               "
             >
               {plans.map((plan) => (
