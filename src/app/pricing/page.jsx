@@ -1206,7 +1206,7 @@ export default function PricingPage() {
 
               bg-white/40
 
-              px-[28px]
+              px-0
               py-[7px]
 
               shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_7px_20px_rgba(51,79,155,0.045)]
@@ -1234,7 +1234,9 @@ export default function PricingPage() {
                   items-center
                   gap-[10px]
                   rounded-[12px]
-                  p-1.5
+                  py-1.5
+                  pl-[28px]
+                  pr-2
                   transition-all
                   duration-200
                   hover:bg-[#101835]
