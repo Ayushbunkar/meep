@@ -1235,7 +1235,7 @@ export default function PricingPage() {
                   gap-[10px]
                   rounded-[12px]
                   py-1.5
-                  pl-[28px]
+                  pl-[54px]
                   pr-2
                   transition-all
                   duration-200
