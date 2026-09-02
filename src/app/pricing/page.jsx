@@ -1197,7 +1197,7 @@ export default function PricingPage() {
               grid-cols-4
               items-center
 
-              gap-[18px]
+              gap-[30px]
 
               rounded-[18px]
 
@@ -1206,7 +1206,7 @@ export default function PricingPage() {
 
               bg-white/40
 
-              px-[22px]
+              px-[28px]
               py-[7px]
 
               shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_7px_20px_rgba(51,79,155,0.045)]
@@ -1228,10 +1228,17 @@ export default function PricingPage() {
               <div
                 key={item.title}
                 className="
+                  group
                   flex
                   min-w-0
                   items-center
                   gap-[10px]
+                  rounded-[12px]
+                  p-1.5
+                  transition-all
+                  duration-200
+                  hover:bg-[#101835]
+                  hover:shadow-md
                 "
               >
                 <div
@@ -1253,6 +1260,11 @@ export default function PricingPage() {
                     text-white
 
                     shadow-[0_5px_11px_rgba(50,81,225,0.17)]
+                    transition-all
+                    duration-200
+                    group-hover:from-[#1a3acc]
+                    group-hover:to-[#1230bb]
+                    group-hover:shadow-[0_5px_14px_rgba(20,50,180,0.40)]
                   "
                 >
                   <TrustIcon type={item.icon} />
@@ -1265,6 +1277,9 @@ export default function PricingPage() {
                       font-semibold
                       leading-[1.15]
                       text-[#47577c]
+                      transition-colors
+                      duration-200
+                      group-hover:text-white
                     "
                   >
                     {item.title}
@@ -1279,6 +1294,9 @@ export default function PricingPage() {
                       text-[9.5px]
                       leading-[1.15]
                       text-[#8791a7]
+                      transition-colors
+                      duration-200
+                      group-hover:text-[#a0b0d0]
 
                       max-md:whitespace-normal
                     "
