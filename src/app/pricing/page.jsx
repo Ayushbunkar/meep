@@ -762,12 +762,10 @@ function HeroArtwork() {
 ========================================================= */
 
 export default function PricingPage() {
-  const cardsGridRef = useRef(null);
-
   useGSAP(() => {
     const scrollerEl = document.querySelector(".maincontainer") ? ".maincontainer" : window;
 
-    // Staggered side entrance for pricing cards
+    // 1. Pricing cards animate in FIRST (smooth side entrance)
     gsap.fromTo(
       ".pricing-card-item",
       {
@@ -779,8 +777,8 @@ export default function PricingPage() {
         opacity: 1,
         x: 0,
         y: 0,
-        duration: 0.95,
-        stagger: 0.12,
+        duration: 0.85,
+        stagger: 0.1,
         ease: "power3.out",
         scrollTrigger: {
           trigger: "[data-pricing-page]",
@@ -791,94 +789,65 @@ export default function PricingPage() {
       }
     );
 
-    // Staggered progressive settling for card inner content
+    // Card inner text progressive settling
     gsap.fromTo(
       ".pricing-card-inner-text",
       { opacity: 0, y: 12 },
       {
         opacity: 1,
         y: 0,
-        duration: 0.8,
-        stagger: 0.05,
+        duration: 0.75,
+        stagger: 0.04,
         ease: "power2.out",
         scrollTrigger: {
           trigger: "[data-pricing-page]",
           scroller: scrollerEl,
-          start: "top 70%",
+          start: "top 75%",
           toggleActions: "play reverse play reverse",
         },
       }
     );
 
-    // Trust strip smooth entrance
+    // 2. Short delay -> Top Hero text section slides in from LEFT
+    gsap.fromTo(
+      ".pricing-hero-content",
+      {
+        opacity: 0,
+        x: -70,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 0.85,
+        delay: 0.45,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: "[data-pricing-page]",
+          scroller: scrollerEl,
+          start: "top 75%",
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+
+    // 3. Trust strip smooth entrance
     gsap.fromTo(
       ".pricing-trust-strip",
-      { opacity: 0, y: 30 },
+      { opacity: 0, y: 25 },
       {
         opacity: 1,
         y: 0,
-        duration: 0.85,
+        duration: 0.75,
+        delay: 0.65,
         ease: "power2.out",
         scrollTrigger: {
           trigger: "[data-pricing-page]",
           scroller: scrollerEl,
-          start: "top 65%",
+          start: "top 75%",
           toggleActions: "play reverse play reverse",
         },
       }
     );
-  }, []);
-
-  useEffect(() => {
-    const grid = cardsGridRef.current;
-    if (!grid) return;
-
-    const section = grid.closest("[data-pricing-page]") || grid;
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const isMobile = window.matchMedia("(max-width: 768px)").matches || "ontouchstart" in window;
-
-    if (reducedMotion || isMobile) return;
-
-    let frame = null;
-    let targetX = 0;
-    let targetY = 0;
-    let currentX = 0;
-    let currentY = 0;
-
-    const handlePointerMove = (e) => {
-      const rect = section.getBoundingClientRect();
-      const x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
-      const y = ((e.clientY - rect.top) / rect.height) * 2 - 1;
-      targetX = Math.max(-1, Math.min(1, x));
-      targetY = Math.max(-1, Math.min(1, y));
-    };
-
-    const handlePointerLeave = () => {
-      targetX = 0;
-      targetY = 0;
-    };
-
-    const animate = () => {
-      currentX += (targetX - currentX) * 0.06;
-      currentY += (targetY - currentY) * 0.06;
-
-      const moveX = currentX * 10;
-      const moveY = currentY * 6;
-
-      grid.style.transform = `translate3d(${moveX}px, ${moveY}px, 0)`;
-
-      frame = requestAnimationFrame(animate);
-    };
-
-    section.addEventListener("pointermove", handlePointerMove);
-    section.addEventListener("pointerleave", handlePointerLeave);
-    frame = requestAnimationFrame(animate);
-
-    return () => {
-      section.removeEventListener("pointermove", handlePointerMove);
-      section.removeEventListener("pointerleave", handlePointerLeave);
-      if (frame) cancelAnimationFrame(frame);
-    };
   }, []);
 
   return (
@@ -1002,6 +971,7 @@ export default function PricingPage() {
 
           <div
             className="
+              pricing-hero-content
               absolute
               left-0
               top-0
