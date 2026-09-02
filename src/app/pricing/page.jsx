@@ -759,8 +759,7 @@ export default function PricingPage() {
     <main
       data-pricing-page
       className="
-        h-screen
-        min-h-[703px]
+        h-[703px]
         w-full
         overflow-hidden
         bg-[#edf3ff]
