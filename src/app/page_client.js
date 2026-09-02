@@ -120,6 +120,9 @@ export default function Home() {
             <div className="hero">
               <Hero handleLoad={handleLoad} />
             </div>
+            <div id="pricing">
+              <PricingPage />
+            </div>
             <Section1 />
             <Section2 />
             <Section21 />
@@ -130,9 +133,6 @@ export default function Home() {
             ></div>
             <Ai_Dao />
             <Section4 />
-            <div id="pricing">
-              <PricingPage />
-            </div>
           </div>
         </main>
       </AssetProvider>
