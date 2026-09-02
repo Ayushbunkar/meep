@@ -519,14 +519,14 @@ function PricingCard({ plan }) {
               "flex h-[44px] w-full shrink-0 items-center justify-center",
               "rounded-full",
               "text-[12px] font-bold leading-none tracking-wide",
-              "transition-all duration-150",
+              "transition-all duration-200",
               "hover:-translate-y-px",
               "active:translate-y-0",
               "focus:outline-none",
               "focus:ring-2 focus:ring-[#4e6dff]/30",
               plan.name === "ENTERPRISE"
-                ? "border-[1.5px] border-[#6c84ff] bg-white/55 text-[#365cff] hover:bg-white/80"
-                : "border-0 bg-gradient-to-b from-[#3763ff] to-[#244df0] text-white shadow-[0_7px_15px_rgba(47,83,240,0.20)] hover:shadow-[0_10px_20px_rgba(47,83,240,0.28)]",
+                ? "border-[1.5px] border-[#6c84ff] bg-white/55 text-[#365cff] hover:bg-[#1a3acc] hover:text-white hover:border-[#1a3acc]"
+                : "border-0 bg-gradient-to-b from-[#3763ff] to-[#244df0] text-white shadow-[0_7px_15px_rgba(47,83,240,0.20)] hover:from-[#1a3acc] hover:to-[#1230bb] hover:shadow-[0_10px_24px_rgba(20,50,180,0.40)]",
             ].join(" ")}
           >
             {plan.button}
@@ -759,18 +759,18 @@ export default function PricingPage() {
     <main
       data-pricing-page
       className="
-        min-h-[750px]
+        h-screen
+        min-h-[703px]
         w-full
         overflow-hidden
         bg-[#edf3ff]
-        py-8
       "
     >
       <section
         className="
           relative
           isolate
-          min-h-[750px]
+          h-full
           w-full
           overflow-hidden
 
@@ -884,14 +884,14 @@ export default function PricingPage() {
 
               w-[750px]
 
-              pt-[39px]
+              pt-[18px]
 
               max-xl:w-[680px]
               max-lg:w-[600px]
 
               max-md:relative
               max-md:w-full
-              max-md:pt-[25px]
+              max-md:pt-[16px]
             "
           >
             {/* PRICING */}
@@ -900,7 +900,7 @@ export default function PricingPage() {
             
               className=" 
                 inline-flex
-                h-[32px]
+                h-[24px]
                 items-center
                 justify-center
 
@@ -1046,7 +1046,7 @@ export default function PricingPage() {
             className="
               absolute
               left-0
-              top-[296px]
+              top-[258px]
 
               z-[20]
 
@@ -1088,7 +1088,7 @@ export default function PricingPage() {
             className="
               absolute
               left-0
-              top-[635px]
+              top-[597px]
 
               z-[25]
 

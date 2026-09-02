@@ -120,7 +120,7 @@ export default function Home() {
             <div className="hero">
               <Hero handleLoad={handleLoad} />
             </div>
-            <div id="pricing">
+            <div id="pricing" style={{ marginTop: "-20px" }}>
               <PricingPage />
             </div>
             <Section1 />
