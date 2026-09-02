@@ -2,6 +2,11 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 /* =========================================================
    PRICING DATA
@@ -282,6 +287,7 @@ function PricingCard({ plan }) {
   return (
     <article
       className={[
+        "pricing-card-item",
         /*
           FIXED CARD SIZE
           All cards are identical.
@@ -325,6 +331,7 @@ function PricingCard({ plan }) {
         <div
           style={{ borderRadius: "9999px", paddingLeft: "36px", paddingRight: "36px" }}
           className="
+            pricing-card-inner-text
             absolute
             left-1/2
             top-0
@@ -371,7 +378,7 @@ function PricingCard({ plan }) {
 
       <div
         style={{ paddingLeft: "28px", paddingRight: "20px", paddingTop: "20px", paddingBottom: "18px" }}
-        className="flex h-full min-h-0 flex-col"
+        className="pricing-card-inner-text flex h-full min-h-0 flex-col"
       >
         {/* PLAN NAME */}
 
@@ -755,6 +762,125 @@ function HeroArtwork() {
 ========================================================= */
 
 export default function PricingPage() {
+  const cardsGridRef = useRef(null);
+
+  useGSAP(() => {
+    const scrollerEl = document.querySelector(".maincontainer") ? ".maincontainer" : window;
+
+    // Staggered side entrance for pricing cards
+    gsap.fromTo(
+      ".pricing-card-item",
+      {
+        opacity: 0,
+        x: 90,
+        y: 15,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        y: 0,
+        duration: 0.95,
+        stagger: 0.12,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: "[data-pricing-page]",
+          scroller: scrollerEl,
+          start: "top 75%",
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+
+    // Staggered progressive settling for card inner content
+    gsap.fromTo(
+      ".pricing-card-inner-text",
+      { opacity: 0, y: 12 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        stagger: 0.05,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: "[data-pricing-page]",
+          scroller: scrollerEl,
+          start: "top 70%",
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+
+    // Trust strip smooth entrance
+    gsap.fromTo(
+      ".pricing-trust-strip",
+      { opacity: 0, y: 30 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.85,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: "[data-pricing-page]",
+          scroller: scrollerEl,
+          start: "top 65%",
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+  }, []);
+
+  useEffect(() => {
+    const grid = cardsGridRef.current;
+    if (!grid) return;
+
+    const section = grid.closest("[data-pricing-page]") || grid;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const isMobile = window.matchMedia("(max-width: 768px)").matches || "ontouchstart" in window;
+
+    if (reducedMotion || isMobile) return;
+
+    let frame = null;
+    let targetX = 0;
+    let targetY = 0;
+    let currentX = 0;
+    let currentY = 0;
+
+    const handlePointerMove = (e) => {
+      const rect = section.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+      const y = ((e.clientY - rect.top) / rect.height) * 2 - 1;
+      targetX = Math.max(-1, Math.min(1, x));
+      targetY = Math.max(-1, Math.min(1, y));
+    };
+
+    const handlePointerLeave = () => {
+      targetX = 0;
+      targetY = 0;
+    };
+
+    const animate = () => {
+      currentX += (targetX - currentX) * 0.06;
+      currentY += (targetY - currentY) * 0.06;
+
+      const moveX = currentX * 10;
+      const moveY = currentY * 6;
+
+      grid.style.transform = `translate3d(${moveX}px, ${moveY}px, 0)`;
+
+      frame = requestAnimationFrame(animate);
+    };
+
+    section.addEventListener("pointermove", handlePointerMove);
+    section.addEventListener("pointerleave", handlePointerLeave);
+    frame = requestAnimationFrame(animate);
+
+    return () => {
+      section.removeEventListener("pointermove", handlePointerMove);
+      section.removeEventListener("pointerleave", handlePointerLeave);
+      if (frame) cancelAnimationFrame(frame);
+    };
+  }, []);
+
   return (
     <main
       data-pricing-page
@@ -1061,6 +1187,7 @@ export default function PricingPage() {
             "
           >
             <div
+              ref={cardsGridRef}
               className="
                 grid
                 grid-cols-4
@@ -1068,6 +1195,7 @@ export default function PricingPage() {
 
                 max-xl:grid-cols-2
                 max-md:grid-cols-1
+                will-change-transform
               "
             >
               {plans.map((plan) => (
@@ -1085,6 +1213,7 @@ export default function PricingPage() {
 
           <section
             className="
+              pricing-trust-strip
               absolute
               left-0
               top-[597px]
