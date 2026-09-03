@@ -349,6 +349,9 @@ export default function PricingPage() {
             padding-right: 20px !important;
             column-gap: 10px !important;
           }
+          .pricing-promo-badge {
+            margin-top: 18px !important;
+          }
         }
         @media (min-width: 560px) and (max-width: 1279px) {
           .pricing-main-section {
@@ -374,6 +377,9 @@ export default function PricingPage() {
             padding-right: 16px !important;
             column-gap: 12px !important;
           }
+          .pricing-promo-badge {
+            margin-top: 20px !important;
+          }
         }
         @media (min-width: 1280px) {
           .pricing-main-section {
@@ -398,6 +404,9 @@ export default function PricingPage() {
             padding-left: 24px !important;
             padding-right: 16px !important;
             column-gap: 14px !important;
+          }
+          .pricing-promo-badge {
+            margin-top: 22px !important;
           }
         }
       `}} />
@@ -428,7 +437,7 @@ export default function PricingPage() {
                 From individual creators to large enterprises, Meep AI has the perfect plan to grow your brand&apos;s visibility and authority.
               </p>
 
-              <div className="mt-[10px] inline-flex min-h-[36px] max-w-full items-center gap-[10px] rounded-[11px] border border-white/95 bg-white/42 px-[14px] py-1 pl-1 text-[11.5px] leading-[1.3] text-[#5e6a84] shadow-[inset_0_1px_0_rgba(255,255,255,0.88),0_7px_22px_rgba(67,89,168,0.05)] backdrop-blur-xl max-md:w-full max-md:justify-center max-md:text-[10.5px]">
+              <div className="pricing-promo-badge inline-flex min-h-[36px] max-w-full items-center gap-[10px] rounded-[11px] border border-white/95 bg-white/42 px-[14px] py-1 pl-1 text-[11.5px] leading-[1.3] text-[#5e6a84] shadow-[inset_0_1px_0_rgba(255,255,255,0.88),0_7px_22px_rgba(67,89,168,0.05)] backdrop-blur-xl max-md:w-full max-md:justify-center max-md:text-[10.5px]">
                 <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-[8px] bg-white/70 text-[#3157ee]">
                   <Sparkles size={14} strokeWidth={1.7} />
                 </span>
