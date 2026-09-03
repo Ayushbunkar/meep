@@ -63,7 +63,7 @@ const trustItems = [
 ];
 
 function TrustIcon({ type }) {
-  const props = { size: 18, strokeWidth: 1.8 };
+  const props = { size: 14, strokeWidth: 1.8 };
 
   if (type === "shield") return <ShieldCheck {...props} />;
   if (type === "lock") return <LockKeyhole {...props} />;
@@ -75,10 +75,11 @@ function PricingCard({ plan }) {
   return (
     <article
       className={[
-        "pricing-card-item relative h-[326px] min-w-0 overflow-visible rounded-[21px] border-[1.25px] bg-white/[0.88] backdrop-blur-[18px] transition-all duration-200 ease-out hover:-translate-y-[2px]",
+        "pricing-card-item relative flex flex-col h-[285px] max-md:h-auto max-md:min-h-[340px] min-w-0 overflow-visible rounded-[21px] border-[1.25px] bg-white/[0.88] backdrop-blur-[18px] transition-all duration-200 ease-out hover:-translate-y-[2px]",
         plan.popular
           ? "border-[#476cff] bg-white/[0.93] shadow-[0_18px_42px_rgba(48,83,221,0.18)] hover:shadow-[0_23px_49px_rgba(48,83,221,0.23)]"
           : "border-[#8ca8ff] shadow-[0_12px_30px_rgba(51,83,168,0.09)] hover:border-[#5d7cff] hover:shadow-[0_18px_37px_rgba(51,83,168,0.13)]",
+        "px-5 py-4 min-[560px]:px-6 min-[560px]:py-4 min-[1280px]:px-6 min-[1280px]:pt-4 min-[1280px]:pb-4"
       ].join(" ")}
     >
       {plan.popular && (
@@ -88,58 +89,50 @@ function PricingCard({ plan }) {
             paddingLeft: "36px",
             paddingRight: "36px",
           }}
-          className="pricing-card-inner-text absolute left-1/2 top-0 z-[100] flex h-[34px] -translate-x-1/2 -translate-y-1/2 items-center justify-center whitespace-nowrap rounded-full border border-[#7a9aff] bg-gradient-to-b from-[#4f73ff] to-[#2d55f0] text-[10px] font-extrabold uppercase tracking-[1.2px] text-white shadow-[0_8px_22px_rgba(45,78,232,0.45)]"
+          className="pricing-card-inner-text absolute left-1/2 top-0 z-[100] flex h-[30px] -translate-x-1/2 -translate-y-1/2 items-center justify-center whitespace-nowrap rounded-full border border-[#7a9aff] bg-gradient-to-b from-[#4f73ff] to-[#2d55f0] text-[9px] font-extrabold uppercase tracking-[1.2px] text-white shadow-[0_8px_22px_rgba(45,78,232,0.45)]"
         >
           MOST POPULAR
         </div>
       )}
 
-      <div
-        style={{
-          paddingLeft: "28px",
-          paddingRight: "20px",
-          paddingTop: "20px",
-          paddingBottom: "18px",
-        }}
-        className="pricing-card-inner-text flex h-full min-h-0 flex-col"
-      >
-        <div className="flex h-[18px] shrink-0 items-center justify-center text-center text-[13px] font-bold leading-none text-[#3159ed]">
+      <div className="pricing-card-inner-text flex flex-col flex-grow min-h-0">
+        <div className="flex h-[14px] shrink-0 items-center justify-center text-center text-[12px] font-bold leading-none text-[#3159ed]">
           {plan.name}
         </div>
 
-        <div className="mt-[9px] flex h-[50px] shrink-0 items-end gap-[7px] whitespace-nowrap">
+        <div className="mt-1 flex h-[38px] shrink-0 items-end justify-start gap-[5px] whitespace-nowrap">
           <span
             className={[
               "font-bold leading-none text-[#2d59ef]",
               plan.price === "Custom"
-                ? "text-[40px] tracking-[-2px]"
-                : "text-[45px] tracking-[-2.5px]",
+                ? "text-[32px] tracking-[-1.5px]"
+                : "text-[34px] tracking-[-2px]",
             ].join(" ")}
           >
             {plan.price}
           </span>
 
           {plan.period && (
-            <span className="mb-[4px] text-[12px] font-normal leading-none text-[#737d95]">
+            <span className="mb-[2px] text-[10px] font-normal leading-none text-[#737d95]">
               {plan.period}
             </span>
           )}
         </div>
 
-        <p className="mt-[9px] h-[48px] shrink-0 max-w-[255px] text-[11.5px] font-normal leading-[1.38] text-[#62708c]">
+        <p className="mt-1 h-[36px] shrink-0 text-left text-[10.5px] font-normal leading-[1.3] text-[#62708c]">
           {plan.description}
         </p>
 
-        <div className="my-[12px] h-px w-full shrink-0 bg-[#e2e8f3]" />
+        <div className="my-1.5 h-px w-full shrink-0 bg-[#e2e8f3]" />
 
-        <ul className="m-0 flex min-h-0 flex-1 list-none flex-col gap-[7px] overflow-hidden p-0">
+        <ul className="m-0 flex flex-col gap-[4px] p-0 flex-grow min-h-0 overflow-hidden">
           {plan.features.map((feature) => (
             <li
               key={feature}
-              className="flex min-h-[15px] shrink-0 items-center gap-[7px] text-[11px] font-normal leading-[1.15] text-[#556580]"
+              className="flex min-h-[14px] shrink-0 items-center gap-[6px] text-[10px] font-normal leading-[1.1] text-[#556580]"
             >
               <span className="flex shrink-0 items-center justify-center text-[#4770ff]">
-                <CircleCheck size={15} strokeWidth={1.8} />
+                <CircleCheck size={14} strokeWidth={1.8} />
               </span>
 
               <span className="min-w-0 truncate">{feature}</span>
@@ -147,12 +140,12 @@ function PricingCard({ plan }) {
           ))}
         </ul>
 
-        <div className="mt-auto flex w-full justify-center">
+        <div className="mt-auto pt-3 flex w-full justify-center">
           <button
             type="button"
             style={{ borderRadius: "9999px" }}
             className={[
-              "flex h-[44px] w-full shrink-0 items-center justify-center rounded-full text-[12px] font-bold leading-none tracking-wide transition-all duration-200 hover:-translate-y-px active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-[#4e6dff]/30",
+              "flex h-[34px] w-full shrink-0 items-center justify-center rounded-full text-[11px] font-bold leading-none tracking-wide transition-all duration-200 hover:-translate-y-px active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-[#4e6dff]/30",
               plan.name === "ENTERPRISE"
                 ? "border-[1.5px] border-[#6c84ff] bg-white/55 text-[#365cff] hover:border-[#5d7cff] hover:bg-[#eef3ff] hover:text-[#3159ed]"
                 : "border-0 bg-gradient-to-b from-[#3763ff] to-[#244df0] text-white shadow-[0_7px_15px_rgba(47,83,240,0.20)] hover:from-[#3159ef] hover:to-[#244df0] hover:shadow-[0_10px_24px_rgba(20,50,180,0.30)]",
@@ -224,8 +217,8 @@ function HeroArtwork() {
   }, []);
 
   return (
-    <div className="pointer-events-auto absolute right-0 top-0 z-[1] hidden h-full w-[70%] md:block min-[1400px]:w-[68%]">
-      <div className="pointer-events-none absolute left-0 top-0 z-[30] h-full w-[45%] max-w-[330px] bg-gradient-to-r from-[#edf3ff] via-[#edf3ff]/80 to-transparent" />
+    <div className="pointer-events-none absolute right-0 top-0 z-[0] hidden h-[240px] min-[1280px]:h-[260px] min-[1400px]:h-[280px] w-[50%] md:block min-[1400px]:w-[48%]">
+      <div className="pointer-events-none absolute left-0 top-0 z-[1] h-full w-[45%] max-w-[330px] bg-gradient-to-r from-[#edf3ff] via-[#edf3ff]/80 to-transparent" />
 
       <div
         ref={glowRef}
@@ -234,7 +227,7 @@ function HeroArtwork() {
 
       <div
         ref={artworkRef}
-        className="absolute inset-x-0 top-[-18px] h-[calc(100%+36px)] [perspective:1200px] [transform-style:preserve-3d] will-change-transform"
+        className="absolute inset-x-0 top-0 h-full [perspective:1200px] [transform-style:preserve-3d] will-change-transform"
       >
         <Image
           src="/pricing-hero.png"
@@ -331,8 +324,85 @@ export default function PricingPage() {
   }, []);
 
   return (
-    <main data-pricing-page className="w-full overflow-x-clip bg-[#edf3ff]">
-      <section style={{ marginLeft: "32px", width: "calc(100% - 64px)" }} className="relative isolate overflow-x-clip rounded-b-[24px] border border-white/70 bg-[radial-gradient(circle_at_86%_2%,rgba(61,90,255,0.50)_0%,rgba(89,116,255,0.28)_22%,transparent_51%),radial-gradient(circle_at_7%_35%,rgba(255,255,255,0.98)_0%,transparent_43%),linear-gradient(132deg,#f5f8ff_0%,#eaf0ff_39%,#dae5ff_68%,#cad8ff_100%)]">
+    <main data-pricing-page className="w-full overflow-x-clip bg-[#edf3ff] pt-[16px] min-[560px]:pt-[24px] min-[1280px]:pt-[30px]">
+      <style dangerouslySetInnerHTML={{__html: `
+        @media (max-width: 559px) {
+          .pricing-main-section {
+            margin-left: 16px !important;
+            margin-right: 16px !important;
+            width: calc(100% - 32px) !important;
+          }
+          .pricing-inner-wrapper {
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+            padding-top: 18px !important;
+            padding-bottom: 24px !important;
+          }
+          .pricing-trust-strip {
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+            column-gap: 12px !important;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+          }
+          .pricing-trust-item {
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+            column-gap: 10px !important;
+          }
+        }
+        @media (min-width: 560px) and (max-width: 1279px) {
+          .pricing-main-section {
+            margin-left: 24px !important;
+            margin-right: 24px !important;
+            width: calc(100% - 48px) !important;
+          }
+          .pricing-inner-wrapper {
+            padding-left: 32px !important;
+            padding-right: 32px !important;
+            padding-top: 24px !important;
+            padding-bottom: 32px !important;
+          }
+          .pricing-trust-strip {
+            padding-left: 24px !important;
+            padding-right: 24px !important;
+            column-gap: 20px !important;
+            padding-top: 12px !important;
+            padding-bottom: 12px !important;
+          }
+          .pricing-trust-item {
+            padding-left: 14px !important;
+            padding-right: 14px !important;
+            column-gap: 12px !important;
+          }
+        }
+        @media (min-width: 1280px) {
+          .pricing-main-section {
+            margin-left: 32px !important;
+            margin-right: 32px !important;
+            width: calc(100% - 64px) !important;
+          }
+          .pricing-inner-wrapper {
+            padding-left: 36px !important;
+            padding-right: 36px !important;
+            padding-top: 30px !important;
+            padding-bottom: 36px !important;
+          }
+          .pricing-trust-strip {
+            padding-left: 40px !important;
+            padding-right: 40px !important;
+            column-gap: 32px !important;
+            padding-top: 12px !important;
+            padding-bottom: 12px !important;
+          }
+          .pricing-trust-item {
+            padding-left: 16px !important;
+            padding-right: 16px !important;
+            column-gap: 14px !important;
+          }
+        }
+      `}} />
+      <section className="pricing-main-section relative isolate overflow-x-clip rounded-b-[24px] border border-white/70 bg-[radial-gradient(circle_at_86%_2%,rgba(61,90,255,0.50)_0%,rgba(89,116,255,0.28)_22%,transparent_51%),radial-gradient(circle_at_7%_35%,rgba(255,255,255,0.98)_0%,transparent_43%),linear-gradient(132deg,#f5f8ff_0%,#eaf0ff_39%,#dae5ff_68%,#cad8ff_100%)]">
         <div className="pointer-events-none absolute -left-[230px] top-[70px] -z-10 h-[500px] w-[500px] rounded-full bg-white blur-[105px]" />
         <div className="pointer-events-none absolute right-[90px] top-[-50px] -z-10 h-[500px] w-[500px] rounded-full bg-[#536eff]/20 blur-[110px]" />
         <div className="pointer-events-none absolute -right-[190px] top-[290px] -z-10 h-[430px] w-[430px] rounded-full bg-[#9eb8ff]/20 blur-[105px]" />
@@ -340,28 +410,28 @@ export default function PricingPage() {
 
         <HeroArtwork />
 
-        <div className="relative z-[5] w-full  pb-[18px] pt-[14px] max-md:pb-[12px] max-md:pt-[12px] py-[36px] min-[560px]:py-[46px] min-[1280px]:py-[56px]">
-    <div style={{ paddingLeft: "40px" }} className="w-full md:pr-[76%] min-[1400px]:pr-[70%]">
+        <div className="pricing-inner-wrapper relative z-[5] w-full pt-[36px] min-[560px]:pt-[46px] min-[1280px]:pt-[56px] pb-[60px] min-[560px]:pb-[74px] min-[1280px]:pb-[88px]">
+    <div className="w-full md:pr-[45%]">
   <div className="pricing-hero-content relative z-[10] w-full max-w-[750px] pt-[4px] max-md:pt-0">
               <div className="inline-flex h-[24px] items-center justify-center rounded-full border border-white/95 bg-white/40 px-[18px] text-[11px] font-bold uppercase tracking-[1.15px] text-[#3455eb] shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_5px_18px_rgba(70,91,190,0.06)] backdrop-blur-xl">
                 PRICING
               </div>
 
               <h1
-                style={{ fontSize: "58px", lineHeight: "0.96", letterSpacing: "-3px" }}
-                className="mb-[14px] mt-[16px] font-bold text-[#10172f] max-2xl:text-[50px] max-xl:text-[44px] max-lg:text-[38px] max-md:text-[30px]"
+                style={{ fontSize: "42px", lineHeight: "1.0", letterSpacing: "-2px" }}
+                className="mb-[8px] mt-[12px] font-bold text-[#10172f] max-2xl:text-[38px] max-xl:text-[34px] max-lg:text-[30px] max-md:text-[24px]"
               >
                 Plans that <span className="font-bold text-[#2d5fff]">scale.</span><br />
                 <span className="font-bold text-[#2d67ff]">Results</span> that speak.
               </h1>
 
-              <p className="m-0 w-full max-w-[720px] text-[16px] font-normal leading-[1.45] text-[#5d6882] max-xl:text-[15px] max-md:text-[14px]">
+              <p className="m-0 w-full max-w-[720px] text-[14.5px] font-normal leading-[1.4] text-[#5d6882] max-xl:text-[13.5px] max-md:text-[13px]">
                 From individual creators to large enterprises, Meep AI has the perfect plan to grow your brand&apos;s visibility and authority.
               </p>
 
-              <div className="mt-[17px] inline-flex min-h-[40px] max-w-full items-center gap-[10px] rounded-[11px] border border-white/95 bg-white/42 px-[14px] py-1 pl-1 text-[12px] leading-[1.3] text-[#5e6a84] shadow-[inset_0_1px_0_rgba(255,255,255,0.88),0_7px_22px_rgba(67,89,168,0.05)] backdrop-blur-xl max-md:w-full max-md:justify-center max-md:text-[11px]">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-[8px] bg-white/70 text-[#3157ee]">
-                  <Sparkles size={17} strokeWidth={1.7} />
+              <div className="mt-[10px] inline-flex min-h-[36px] max-w-full items-center gap-[10px] rounded-[11px] border border-white/95 bg-white/42 px-[14px] py-1 pl-1 text-[11.5px] leading-[1.3] text-[#5e6a84] shadow-[inset_0_1px_0_rgba(255,255,255,0.88),0_7px_22px_rgba(67,89,168,0.05)] backdrop-blur-xl max-md:w-full max-md:justify-center max-md:text-[10.5px]">
+                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-[8px] bg-white/70 text-[#3157ee]">
+                  <Sparkles size={14} strokeWidth={1.7} />
                 </span>
 
                 <span>
@@ -374,32 +444,32 @@ export default function PricingPage() {
             </div>
           </div>
 
-          <section className="relative z-[20] max-md:mt-[24px]">
-            <div className="grid grid-cols-1 gap-[26px] min-[560px]:grid-cols-2 min-[1280px]:grid-cols-4 min-[1280px]:gap-[30px]">
+          <section className="relative z-[20] mt-[14px] max-md:mt-[10px]">
+            <div className="grid grid-cols-1 gap-[26px] min-[560px]:grid-cols-2 min-[1280px]:grid-cols-4 min-[1280px]:gap-[36px]">
               {plans.map((plan) => (
                 <PricingCard key={plan.name} plan={plan} />
               ))}
             </div>
           </section>
 
-          <div className="h-[22px] max-md:h-[18px]" aria-hidden="true" />
+          <div className="h-[8px] max-md:h-[6px]" aria-hidden="true" />
 
-        <section className="pricing-trust-strip relative z-[25] mb-[12px] grid grid-cols-1 gap-[18px] rounded-[18px] border border-[#b9c9ea] bg-white/40 px-[34px] py-[16px] shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_7px_20px_rgba(51,79,155,0.045)] backdrop-blur-xl min-[560px]:grid-cols-2 min-[560px]:gap-x-[38px] min-[1280px]:grid-cols-4 min-[1280px]:gap-x-[56px]">
+        <section className="pricing-trust-strip relative z-[25] mb-[12px] grid grid-cols-1 gap-y-6 rounded-[18px] border border-[#b9c9ea] bg-white/40 py-2 shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_7px_20px_rgba(51,79,155,0.045)] backdrop-blur-xl min-[560px]:grid-cols-2 min-[560px]:py-3 min-[560px]:gap-x-8 min-[1280px]:grid-cols-4 min-[1280px]:py-3.5">
   {trustItems.map((item) => (
     <div
       key={item.title}
-      className="group flex min-w-0 items-center gap-[14px] rounded-[12px] py-1.5 pl-[28px] pr-[18px] transition-all duration-200 hover:bg-[#edf3ff] hover:shadow-[0_6px_18px_rgba(63,95,190,0.08)]"
+      className="pricing-trust-item group flex min-w-0 items-center rounded-[12px] py-1 pr-4 transition-all duration-200 hover:bg-[#edf3ff] hover:shadow-[0_6px_18px_rgba(63,95,190,0.08)]"
     >
-      <div className="flex h-[31px] w-[31px] shrink-0 items-center justify-center rounded-[8px] bg-gradient-to-b from-[#4266f7] to-[#274de1] text-white shadow-[0_5px_11px_rgba(50,81,225,0.17)] transition-all duration-200 group-hover:from-[#4d72f8] group-hover:to-[#3159e8] group-hover:shadow-[0_5px_14px_rgba(50,81,225,0.18)]">
+      <div className="flex h-[26px] w-[26px] shrink-0 items-center justify-center rounded-[8px] bg-gradient-to-b from-[#4266f7] to-[#274de1] text-white shadow-[0_5px_11px_rgba(50,81,225,0.17)] transition-all duration-200 group-hover:from-[#4d72f8] group-hover:to-[#3159e8] group-hover:shadow-[0_5px_14px_rgba(50,81,225,0.18)]">
         <TrustIcon type={item.icon} />
       </div>
 
       <div className="min-w-0">
-        <div className="text-[11px] font-semibold leading-[1.15] text-[#47577c] transition-colors duration-200 group-hover:text-[#3159ed] max-md:truncate">
+        <div className="text-[10.5px] font-semibold leading-[1.15] text-[#47577c] transition-colors duration-200 group-hover:text-[#3159ed] max-md:truncate">
           {item.title}
         </div>
 
-        <div className="mt-[3px] text-[9.5px] leading-[1.25] text-[#8791a7] transition-colors duration-200 group-hover:text-[#6f7c9a]">
+        <div className="mt-[2px] text-[9px] leading-[1.25] text-[#8791a7] transition-colors duration-200 group-hover:text-[#6f7c9a]">
           {item.description}
         </div>
       </div>
