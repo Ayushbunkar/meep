@@ -147,8 +147,8 @@ function PricingCard({ plan }) {
             className={[
               "flex h-[34px] w-full shrink-0 items-center justify-center rounded-full text-[11px] font-bold leading-none tracking-wide transition-all duration-200 hover:-translate-y-px active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-[#4e6dff]/30",
               plan.name === "ENTERPRISE"
-                ? "border-[1.5px] border-[#6c84ff] bg-white/55 text-[#365cff] hover:border-[#5d7cff] hover:bg-[#eef3ff] hover:text-[#3159ed]"
-                : "border-0 bg-gradient-to-b from-[#3763ff] to-[#244df0] text-white shadow-[0_7px_15px_rgba(47,83,240,0.20)] hover:from-[#3159ef] hover:to-[#244df0] hover:shadow-[0_10px_24px_rgba(20,50,180,0.30)]",
+                ? "border-[1.5px] border-[#6c84ff] bg-white/55 text-[#365cff] hover:border-[#1b44eb] hover:bg-gradient-to-b hover:from-[#1b44eb] hover:to-[#1033d6] hover:text-white hover:shadow-[0_8px_18px_rgba(15,35,150,0.25)]"
+                : "border-0 bg-gradient-to-b from-[#3763ff] to-[#244df0] text-white shadow-[0_7px_15px_rgba(47,83,240,0.20)] hover:from-[#1b44eb] hover:to-[#1033d6] hover:shadow-[0_10px_24px_rgba(15,35,150,0.35)]",
             ].join(" ")}
           >
             {plan.button}
@@ -443,7 +443,9 @@ export default function PricingPage() {
             </div>
           </div>
 
-          <section className="relative z-[20] mt-[14px] max-md:mt-[10px]">
+          <div className="h-[32px] max-md:h-[28px]" aria-hidden="true" />
+
+          <section className="relative z-[20] mt-0">
             <div className="grid grid-cols-1 gap-[26px] min-[560px]:grid-cols-2 min-[1280px]:grid-cols-4 min-[1280px]:gap-[36px]">
               {plans.map((plan) => (
                 <PricingCard key={plan.name} plan={plan} />
