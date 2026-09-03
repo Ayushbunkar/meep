@@ -251,10 +251,9 @@ export default function PricingPage() {
 
     gsap.fromTo(
       ".pricing-card-item",
-      { opacity: 0, x: 90, y: 15 },
+      { opacity: 0, y: 30 },
       {
         opacity: 1,
-        x: 0,
         y: 0,
         duration: 0.85,
         stagger: 0.1,
@@ -339,15 +338,15 @@ export default function PricingPage() {
             padding-bottom: 24px !important;
           }
           .pricing-trust-strip {
-            padding-left: 20px !important;
-            padding-right: 20px !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
             column-gap: 12px !important;
             padding-top: 10px !important;
             padding-bottom: 10px !important;
           }
           .pricing-trust-item {
-            padding-left: 10px !important;
-            padding-right: 10px !important;
+            padding-left: 20px !important;
+            padding-right: 20px !important;
             column-gap: 10px !important;
           }
         }
@@ -364,15 +363,15 @@ export default function PricingPage() {
             padding-bottom: 32px !important;
           }
           .pricing-trust-strip {
-            padding-left: 24px !important;
-            padding-right: 24px !important;
-            column-gap: 20px !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            column-gap: 26px !important;
             padding-top: 12px !important;
             padding-bottom: 12px !important;
           }
           .pricing-trust-item {
-            padding-left: 14px !important;
-            padding-right: 14px !important;
+            padding-left: 24px !important;
+            padding-right: 16px !important;
             column-gap: 12px !important;
           }
         }
@@ -389,14 +388,14 @@ export default function PricingPage() {
             padding-bottom: 36px !important;
           }
           .pricing-trust-strip {
-            padding-left: 40px !important;
-            padding-right: 40px !important;
-            column-gap: 32px !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            column-gap: 36px !important;
             padding-top: 12px !important;
             padding-bottom: 12px !important;
           }
           .pricing-trust-item {
-            padding-left: 16px !important;
+            padding-left: 24px !important;
             padding-right: 16px !important;
             column-gap: 14px !important;
           }
